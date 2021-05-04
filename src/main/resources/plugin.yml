@@ -1,0 +1,16 @@
+main: me.adelemphii.birthdaycards.BirthdayCards
+name: BirthdayCards
+author: Adelemphii
+version: ${project.version}
+api-version: 1.13
+
+commands:
+  set:
+    usage: "Usage: /set <month> <day> <year>"
+    description: Set your birthday so you can get a special tag and view your notes on your birthday!
+  bclear:
+    description: DEV PURPOSES
+  birthdaynote:
+    description: Displays all the commands available in the plugin!
+    aliases: bn
+
