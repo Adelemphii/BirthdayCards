@@ -15,7 +15,6 @@ public class BirthdayCards extends JavaPlugin {
 
     public NoteMakerUtil nmu;
 
-
     @Override
     public void onEnable() {
         config = new ConfigManager(this);

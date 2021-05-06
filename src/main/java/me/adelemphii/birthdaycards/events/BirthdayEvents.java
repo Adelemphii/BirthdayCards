@@ -40,7 +40,6 @@ public class BirthdayEvents implements Listener {
 
             // Prints year-month-day
             String date = plugin.config.getConfig().getString("players." + uuid + ".birthday");
-            LocalDate localDate = LocalDate.now();
 
             String[] dateArray = date.split("-");
 
@@ -74,7 +73,7 @@ public class BirthdayEvents implements Listener {
 
         if(event.getHand() == EquipmentSlot.OFF_HAND) return;
 
-        if(event.getPlayer().getInventory().getItemInOffHand() == null || player.getInventory().getItemInOffHand().getType() == Material.AIR)
+        if(player.getInventory().getItemInOffHand().getType() == Material.AIR)
             return;
         ItemStack item = player.getInventory().getItemInOffHand();
         ItemMeta itemMeta = item.getItemMeta();
@@ -94,11 +93,7 @@ public class BirthdayEvents implements Listener {
 
                 player.getInventory().setItemInOffHand(null);
                 player.sendMessage(ChatColor.GREEN + "Card sent to " + Bukkit.getPlayer(UUID.fromString(recipient)).getDisplayName());
-
-
             }
         }
-
     }
-
 }
